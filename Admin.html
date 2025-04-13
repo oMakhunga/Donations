@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="R.jpeg" type="image/x-icon">
+    <script src="Layout.html"></script>
+</head>
+<body>
+    <h3 style="text-align: center;">Admin</h5>
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <title>Donation Records</title>
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        </head>
+        <body class="bg-light p-4">
+          <div class="container">
+            <h2 class="mb-4">All Donation Records</h2>
+            <div id="recordList"></div>
+        
+            <a href="Index.html" class="btn btn-primary mt-4">Back to Donation Form</a>
+          </div>
+        
+          <script>
+            function showAllRecords() {
+              const container = document.getElementById("recordList");
+              container.innerHTML = "";
+        
+              const records = JSON.parse(localStorage.getItem("donationRecords")) || [];
+        
+              if (records.length === 0) {
+                container.innerHTML = "<p class='text-muted'>No records found.</p>";
+                return;
+              }
+        
+              records.forEach((rec, index) => {
+                const card = document.createElement("div");
+                card.className = "card p-3 mb-3 shadow-sm";
+                card.innerHTML = `
+                  <h5>Donor ${index + 1}: ${rec.fullName}</h5>
+                  <p><strong>DOB:</strong> ${rec.dob}</p>
+                  <p><strong>Gender:</strong> ${rec.gender}</p>
+                  <p><strong>Email:</strong> ${rec.emailAddress}</p>
+                  <p><strong>Phone:</strong> ${rec.phoneNumber}</p>
+                  <p><strong>Donation:</strong> ${rec.donationType} (${rec.donationFrequency})</p>
+                  <p><strong>Availability:</strong> ${rec.availability}</p>
+                  <p><strong>Reason:</strong> ${rec.donationReason}</p>
+                  <p><strong>Medical Conditions:</strong> ${rec.medicalConditions}</p>
+                  <hr/>
+                `;
+                container.appendChild(card);
+              });
+            }
+        
+            // Load on page load
+            window.onload = showAllRecords;
+          </script>
+        </body>
+        </html>
+        
+          
+</body>
+</html>

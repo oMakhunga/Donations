@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity begins at home</title>
+    <link rel="icon" href="R.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="style/slideshow.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cerulean/bootstrap.min.css" rel="stylesheet">   
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: fixed; width: 100%;" >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CharityChamps</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04" aria-controls="navbarColor04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor04">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="register.html">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="donate.html">Donate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="Login.html">Admin</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <form>
+        <!-- Personal Information -->
+        <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+          <fieldset>
+            <legend style="margin-top: 80px;">Personal Information</legend>
+            <div class="row mb-3">
+              <label for="fullName" class="col-sm-2 col-form-label">Full Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="dob" class="col-sm-2 col-form-label">Date of Birth</label>
+              <div class="col-sm-10">
+                <input type="date" class="form-control" id="dob">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="gender" class="col-sm-2 col-form-label">Gender</label>
+              <div class="col-sm-10">
+                <select class="form-select" id="gender">
+                  <option value="">Select gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="idNumber" class="col-sm-2 col-form-label">ID Number / Passport Number</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="idNumber" placeholder="Enter ID or passport number">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="profilePicture" class="col-sm-2 col-form-label">Profile Picture</label>
+              <div class="col-sm-10">
+                <input class="form-control" type="file" id="profilePicture">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      
+        <!-- Contact Information -->
+        <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+          <fieldset>
+            <legend>Contact Information</legend>
+            <div class="row mb-3">
+              <label for="phoneNumber" class="col-sm-2 col-form-label">Phone Number</label>
+              <div class="col-sm-10">
+                <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter phone number">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="emailAddress" class="col-sm-2 col-form-label">Email Address</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="emailAddress" placeholder="Enter email">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="physicalAddress" class="col-sm-2 col-form-label">Physical Address / Location</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="physicalAddress" placeholder="Enter city/town">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      
+        <!-- Donation Details -->
+        <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+          <fieldset>
+            <legend>Donation Details</legend>
+            <div class="row mb-3">
+              <label for="donationType" class="col-sm-2 col-form-label">Type of Donation</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="donationType" placeholder="e.g. blood, kidney, money, food, clothes">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="availability" class="col-sm-2 col-form-label">Availability / Willingness</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="availability" placeholder="e.g. available weekends, only in emergencies">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="donationFrequency" class="col-sm-2 col-form-label">Donation Frequency</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="donationFrequency" placeholder="e.g. one-time, monthly">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="preferredContactMethod" class="col-sm-2 col-form-label">Preferred Contact Method</label>
+              <div class="col-sm-10">
+                <select class="form-select" id="preferredContactMethod">
+                  <option value="whatsapp">WhatsApp</option>
+                  <option value="phone">Phone</option>
+                  <option value="email">Email</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      
+        <!-- Medical Information -->
+        <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+          <fieldset>
+            <legend>Medical Information (if applicable)</legend>
+            <div class="row mb-3">
+              <label for="bloodType" class="col-sm-2 col-form-label">Blood Type</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="bloodType" placeholder="Enter blood type">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="medicalConditions" class="col-sm-2 col-form-label">Medical Conditions</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="medicalConditions" rows="3" placeholder="Enter any disqualifying issues or allergies"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="currentMedications" class="col-sm-2 col-form-label">Current Medications</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="currentMedications" rows="3" placeholder="Enter current medications"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="vaccinationStatus" class="col-sm-2 col-form-label">Vaccination Status</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="vaccinationStatus" placeholder="Enter vaccination status">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      
+        <!-- Legal and Consent -->
+        <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+          <fieldset>
+            <legend>Legal and Consent</legend>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="consentCheckbox">
+              <label class="form-check-label" for="consentCheckbox">
+                I confirm that I voluntarily want to be listed
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="termsConditions">
+              <label class="form-check-label" for="termsConditions">
+                I agree to the Terms & Conditions
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="privacyPolicy">
+              <label class="form-check-label" for="privacyPolicy">
+                I accept the Privacy Policy
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="parentalConsent">
+              <label class="form-check-label" for="parentalConsent">
+                I have parental/guardian consent (if under 18)
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      
+        <!-- Optional Extras -->
+        <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+          <fieldset>
+            <legend>Optional Extras</legend>
+            <div class="row mb-3">
+              <label for="donationReason" class="col-sm-2 col-form-label">Why They Want to Donate</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="donationReason" rows="3" placeholder="Share a small story or reason to build trust"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="socialMediaLinks" class="col-sm-2 col-form-label">Social Media Links</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="socialMediaLinks" placeholder="Enter social media links">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="previousDonationHistory" class="col-sm-2 col-form-label">Previous Donation History</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="previousDonationHistory" rows="3" placeholder="Enter previous donation history"></textarea>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      
+        <!-- Submit Button -->
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary btn-lg" style="width: auto; padding:10px 20px;">Submit</button>
+        </div>
+      
+      </form>
+
+      <div class="d-grid mt-4">
+        <a href="Admin.html" class="btn btn-secondary btn-lg">View All Records</a>
+      </div>
+      
+      
+      
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.querySelector('form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent form from submitting
+
+    // Validate required fields
+    const requiredFields = [
+      'fullName', 'dob', 'gender', 'idNumber',
+      'phoneNumber', 'emailAddress', 'physicalAddress',
+      'donationType', 'availability', 'donationFrequency',
+      'preferredContactMethod', 'bloodType',
+      'vaccinationStatus'
+    ];
+
+    let isValid = true;
+    requiredFields.forEach(fieldId => {
+      const field = document.getElementById(fieldId);
+      if (!field.value.trim()) {
+        isValid = false;
+        field.style.border = "2px solid red";
+      } else {
+        field.style.border = "1px solid #ccc";
+      }
+    });
+
+    // Checkbox validation
+    const consent = document.getElementById("consentCheckbox").checked;
+    const terms = document.getElementById("termsConditions").checked;
+    const privacy = document.getElementById("privacyPolicy").checked;
+    const parental = document.getElementById("parentalConsent").checked;
+
+    if (!consent || !terms || !privacy) {
+      alert("You must agree to the required checkboxes.");
+      isValid = false;
+    }
+
+    // If under 18, parental consent must be checked
+    const dob = new Date(document.getElementById('dob').value);
+    const age = new Date().getFullYear() - dob.getFullYear();
+    if (age < 18 && !parental) {
+      alert("If under 18, parental consent is required.");
+      isValid = false;
+    }
+
+    if (!isValid) return;
+
+    // Gather all form data
+    const formData = {
+      fullName: document.getElementById("fullName").value,
+      dob: document.getElementById("dob").value,
+      gender: document.getElementById("gender").value,
+      idNumber: document.getElementById("idNumber").value,
+      phoneNumber: document.getElementById("phoneNumber").value,
+      emailAddress: document.getElementById("emailAddress").value,
+      physicalAddress: document.getElementById("physicalAddress").value,
+      donationType: document.getElementById("donationType").value,
+      availability: document.getElementById("availability").value,
+      donationFrequency: document.getElementById("donationFrequency").value,
+      preferredContactMethod: document.getElementById("preferredContactMethod").value,
+      bloodType: document.getElementById("bloodType").value,
+      medicalConditions: document.getElementById("medicalConditions").value,
+      currentMedications: document.getElementById("currentMedications").value,
+      vaccinationStatus: document.getElementById("vaccinationStatus").value,
+      donationReason: document.getElementById("donationReason").value,
+      socialMediaLinks: document.getElementById("socialMediaLinks").value,
+      previousDonationHistory: document.getElementById("previousDonationHistory").value,
+    };
+
+    // Store in localStorage (simulate writing to file)
+    let allRecords = JSON.parse(localStorage.getItem("donationRecords")) || [];
+    allRecords.push(formData);
+    localStorage.setItem("donationRecords", JSON.stringify(allRecords));
+
+    alert("Form submitted successfully!");
+    this.reset();
+  });
+
+  function showAllRecords() {
+    const container = document.getElementById("recordList");
+    container.innerHTML = ""; // Clear previous
+
+    const records = JSON.parse(localStorage.getItem("donationRecords")) || [];
+
+    if (records.length === 0) {
+      container.innerHTML = "<p>No records found.</p>";
+      return;
+    }
+
+    records.forEach((rec, index) => {
+      const card = document.createElement("div");
+      card.className = "card p-3 mb-3";
+      card.innerHTML = `
+        <h5>Donor ${index + 1}: ${rec.fullName}</h5>
+        <p><strong>DOB:</strong> ${rec.dob}</p>
+        <p><strong>Email:</strong> ${rec.emailAddress}</p>
+        <p><strong>Donation:</strong> ${rec.donationType} (${rec.donationFrequency})</p>
+        <p><strong>Reason:</strong> ${rec.donationReason}</p>
+        <hr/>
+      `;
+      container.appendChild(card);
+    });
+  }
+</script>
+
+</html>
